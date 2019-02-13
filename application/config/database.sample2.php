@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'ecommerse',
+	'hostname' => 'nanyukiappfactory-mysqldbserver.mysql.database.azure.com',
+	'username' => 'appfactory@nanyukiappfactory-mysqldbserver',
+	'password' => 'appfactory',
+	'database' => 'nanyukiaf',
 	// 'hostname' => 'nanyukiappfactory-mysqldbserver.mysql.database.azure.com',
 	// 'username' => 'appfactory@nanyukiappfactory-mysqldbserver',
 	// 'password' => 'appfactory',
@@ -88,6 +88,7 @@ $db['default'] = array(
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
+	
 	'cachedir' => '',
 	'char_set' => 'utf8',
 	'dbcollat' => 'utf8_general_ci',
