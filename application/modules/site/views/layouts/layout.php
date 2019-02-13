@@ -12,16 +12,36 @@
   <?php $this->load->view("site/layouts/includes/sidebar");?>
   
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4 pt-5">
-      <?php echo $content;?>
+      <?php
+        $error =$this->session->flashdata("error");
+        $success =$this->session->flashdata("success");
+        if(!empty($error))
+        {
+            ?>
+            <div class = "alert alert-danger">
+              <?php echo $error;?>
+            </div>
+            <?php
+        }
+        if(!empty($success))
+        {
+          ?>
+          <div class = "alert alert-success">
+          <?php echo $success;?>
+          </div>
+          <?php
+        }
+      ?>
+          <?php echo $content;?>
     </main>
   </div>
 </div>
 <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery-3.3.1.slim.min.js"></script>
 
 
-<script src="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css"></script>
-<script src="<?php echo base_url() ?>assets/vendor/bootstrap/js/bootstrap.min.js"></script>
- <link href="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css"></script>
+  <script src="<?php echo base_url() ?>assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <link href="<?php echo base_url() ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <script src="<?php echo base_url() ?>assets/vendor/jquery/jquery-3.3.1.slim.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="<?php echo base_url() ?>assets/vendor/bootstrap/js/bootstrap.min.js" rel="stylesheet" />
