@@ -75,15 +75,16 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'ecommerse',
+	'hostname' => 'nanyukiappfactory-mysqldbserver.mysql.database.azure.com',
+	'username' => 'samuel@nanyukiappfactory-mysqldbserver',
+	'password' => 'samuel!!@',
+	'database' => 'samueldb',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
+
 	'cachedir' => '',
 	'char_set' => 'utf8',
 	'dbcollat' => 'utf8_general_ci',
